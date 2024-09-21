@@ -37,7 +37,11 @@
                                         <td>{{ $item->umur }}</td>
                                         <td>{{ $item->foto }}</td>
                                         <td>{{ $item->alamat }}</td>
-                                        <td>{{ $item->aksi }}</td>
+                                        <td>{{ $item->aksi }}
+                                            <a href='form-edit.php?id=".$siswa['id'],"'>Edit</a>
+                                            <a href='hapus.php? id=".$siswa['id']."' onclick='return confirm(\"apakah anda yakin?\)'>Hapus</a>
+                                        </td>
+
                                     </tr>
                                 @endforeach
                             </tbody>
