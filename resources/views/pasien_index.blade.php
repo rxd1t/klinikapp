@@ -35,7 +35,8 @@
                                         </td>
                                         <td>{{ $item->jenis_kelamin }}</td>
                                         <td>{{ $item->umur }}</td>
-                                        <td>{{ $item->foto }}</td>
+                                        {{ $foto=$item->foto ? $item->foto : '0.png' }}
+                                        <td><img src="/storage/images/{{ $foto }}" alt="foto" height="30px"></td>
                                         <td>{{ $item->alamat }}</td>
                                         <td>{{ $item->aksi }}
                                             <a href='form-edit.php?id=".$siswa['id'],"'>Edit</a>
